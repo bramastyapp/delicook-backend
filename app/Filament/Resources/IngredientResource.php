@@ -38,7 +38,8 @@ class IngredientResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('photo'),
+                Tables\Columns\ImageColumn::make('photo')
+                    ->square(),
             ])
             ->filters([
                 //
