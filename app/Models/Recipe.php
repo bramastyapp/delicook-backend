@@ -37,7 +37,8 @@ class Recipe extends Model
 
     public function author(): BelongsTo
     {
-        return $this->belongsTo(RecipeAuthor::class);
+        return $this->belongsTo(RecipeAuthor::class, 'recipe_author_id');
+        //jika nama method tidak sama dengan field nya, maka akan menjadi masalah ketika tidak mendefinisikan id dengan tepat
     }
 
     public function photos(): HasMany
