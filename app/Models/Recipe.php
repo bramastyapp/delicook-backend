@@ -24,7 +24,7 @@ class Recipe extends Model
         "url_video",
     ];
 
-    public function setNameAttAttribute($value)
+    public function setNameAttribute($value)
     {
         $this->attributes["name"] = $value;
         $this->attributes["slug"] = Str::slug($value);
