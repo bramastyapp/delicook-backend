@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\RecipeController;
+use App\Http\Controllers\Api\SearchController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,3 +15,5 @@ Route::apiResource('/categories', CategoryController::class)->only(['index']);
 
 Route::get('/recipe/{recipe:slug}', [RecipeController::class, 'show']);
 Route::apiResource('/recipes', RecipeController::class)->only(['index']);
+
+Route::get('/recipes/search', [SearchController::class, 'index']);
